@@ -1,6 +1,7 @@
 @charset "UTF-8";
 @import url("font-awesome.min.css");
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic");
+@import url("https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css");
 /*
 	Strata by HTML5 UP
 	html5up.net | @ajlkn
@@ -1615,6 +1616,23 @@ input[type=radio] + label:before {
   display: none;
 }
 
+.large-icon {
+  text-decoration: none;
+  border-bottom: none;
+  position: relative;
+}
+.large-icon:before {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 60px;
+  text-transform: none !important;
+}
+.large-icon > .label {
+  display: none;
+}
+
 /* Image */
 .image {
   border-radius: 0.35em;
@@ -1756,6 +1774,21 @@ ul.icons li:last-child {
   padding-right: 0;
 }
 ul.icons li .icon:before {
+  font-size: 1.5em;
+}
+
+ul.large-icons {
+  cursor: default;
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+ul.large-icons li {
+  display: inline-block;
+  padding: 1em 2em;
+}
+ul.large-icons li .icon:before {
   font-size: 1.5em;
 }
 
@@ -2481,7 +2514,7 @@ body.is-touch .poptrox-popup .closer {
   /* Header */
   #header {
     background-attachment: scroll;
-    background-position: left center, center;
+    background-position: center center, center;
     background-size: auto, cover;
     left: auto;
     padding: 6em 4em;

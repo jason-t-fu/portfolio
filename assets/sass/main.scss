@@ -6,6 +6,7 @@
 @import 'libs/html-grid';
 @import url('font-awesome.min.css');
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic");
+@import url("https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css");
 
 /*
 	Strata by HTML5 UP
@@ -571,6 +572,16 @@ $size-header-pad: 4em;
 		}
 	}
 
+	.large-icon {
+		@include large-icon;
+		border-bottom: none;
+		position: relative;
+
+		> .label {
+			display: none;
+		}
+	}
+
 /* Image */
 
 	.image {
@@ -731,6 +742,25 @@ $size-header-pad: 4em;
 			&:last-child {
 				padding-right: 0;
 			}
+
+			.icon {
+				&:before {
+					font-size: 1.5em;
+				}
+			}
+		}
+	}
+
+	ul.large-icons {
+		cursor: default;
+		list-style: none;
+		padding-left: 0;
+		display: flex;
+		flex-wrap: wrap;
+
+		li {
+			display: inline-block;
+			padding: 1em 2em;
 
 			.icon {
 				&:before {
@@ -1434,7 +1464,7 @@ $size-header-pad: 4em;
 
 			#header {
 				background-attachment:	scroll;
-				background-position:	left center, center;
+				background-position:	center center, center;
 				background-size:		auto,		cover;
 				left: auto;
 				padding: ($size-header-pad * 1.5) $size-header-pad;
