@@ -2,3 +2,6 @@ node_modules/
 
 LICENSE.txt
 README.txt
+
+.vscode
+.DS_Store

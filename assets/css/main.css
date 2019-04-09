@@ -1678,6 +1678,7 @@ input[type=radio] + label:before {
   text-decoration: none;
   top: 50%;
   white-space: nowrap;
+  opacity: 0;
 }
 .image.thumb:hover:after {
   opacity: 1;
